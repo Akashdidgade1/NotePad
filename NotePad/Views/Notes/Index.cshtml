@@ -1,0 +1,44 @@
+﻿@model List<NotePad.Models.Note>
+
+@{
+    ViewData["Title"] = "Notes";
+}
+
+<h2 class="text-center">Notes</h2>
+
+<!-- Notes List -->
+<div id="notesContainer">
+    @foreach (var note in Model)
+    {
+        <div class="note-card">
+            <h4>@note.Title</h4>
+            <p>@note.Content</p>
+        </div>
+    }
+</div>
+
+<!-- Add New Note Form -->
+<div class="mt-4">
+    <h3>Add New Note</h3>
+    <form method="post" asp-action="AddNote">
+        <div class="mb-3">
+            <label class="form-label">Title</label>
+            <input type="text" class="form-control" name="title" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Content</label>
+            <textarea class="form-control" name="content" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Note</button>
+    </form>
+</div>
+
+<style>
+    .note-card {
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+</style>
