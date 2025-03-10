@@ -2,11 +2,17 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    public string? Summary { get; set; }
-    <h1 class="display-4">Welcome To My first Wb App :-  NotePad</h1>
-    <h1 class="display-4">We are Developers</h1>
-
-    <h2>test</h2>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="d-center w-50">
+    <h2 class="mb-3">Login</h2>
+    <form>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter your password">
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Login</button>
+    </form>
 </div>
